@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Advent+Pro:wght@400;500&family=Pacifico&display=swap');
+@import "./variables.scss";
+*{
+  margin: 0;
+  padding: 0;
+  border: 0;
+  text-decoration: none;
+  color: #000;
+  font-family: $fontP;
+}
+body{
+  min-height: 100%;
+  position: relative;
+  &.lock{
+    overflow: hidden;
+  }
+}
+li{
+  list-style: none;
+}
+.bg {
+  width: 100%;
+  height: 100%;
+  img{
+    object-fit: cover;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: -1;
+  }
+}
+
+.slick-center{
+  transform: scale(1);
+  opacity: 1;
+}
+.slick-list {
+  overflow: hidden;
+}
+.slick-track{
+  display: flex;
+  align-items: center;
+}
+.slick-arrow{
+  font-size: 0;
+  position: absolute;
+  z-index: 10;
+  width: 100px;
+  height: 100%;
+  background-color: #ffffff00;
+}
+.slick-prev{
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);}
+.slick-next{
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}

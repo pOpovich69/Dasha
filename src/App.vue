@@ -1,30 +1,30 @@
 <script setup>
-import HelloWorld from './components/HelloWorld.vue'
+import VHeader from './components/VHeader.vue';
+import FullScreen from './components/FullScreen.vue';
+import AboutMe from './components/AboutMe.vue';
+import VSlider from './components/VSlider.vue';
+import Price from './components/Price.vue';
+import Contacts from './components/Contacts.vue';
+import VFooter from './components/VFooter.vue';
+
 </script>
 
 <template>
-  <div>
-    <a href="https://vitejs.dev" target="_blank">
-      <img src="/vite.svg" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://vuejs.org/" target="_blank">
-      <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
-    </a>
-  </div>
-  <HelloWorld msg="Vite + Vue" />
+<VHeader/>
+<main class="main">
+    <FullScreen/>
+    <AboutMe/>
+    <VSlider/>
+    <Price/>
+    <Contacts/>
+</main>
+<VFooter/>
 </template>
 
-<style scoped>
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.vue:hover {
-  filter: drop-shadow(0 0 2em #42b883aa);
+<style scoped lang="scss">
+.main{
+    position: relative;
+    padding-top: 70px;
+    height: calc(100% - 70px);
 }
 </style>
