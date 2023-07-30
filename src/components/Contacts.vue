@@ -32,18 +32,18 @@ import VTitle from './UI/VTitle.vue'
     }
     &__inst {
         font-family: $fontAP;
-        @include adaptiv-font(34, 30);
+        @include adaptiv-font(34, 25);
         a{
             font-family: $fontAP;
-            @include adaptiv-font(34, 30);
+            @include adaptiv-font(34, 25);
         }
     }
     &__face {
         font-family: $fontAP;
-        @include adaptiv-font(34, 30);
+        @include adaptiv-font(34, 25);
         a{
             font-family: $fontAP;
-            @include adaptiv-font(34, 30);
+            @include adaptiv-font(34, 25);
         }
     }
     &__img {
@@ -57,6 +57,17 @@ import VTitle from './UI/VTitle.vue'
         }
     }
 @extend %limiter;
+}
+@media (max-width:756px) {
+    .contacts{
+        &__row{
+            flex-direction: column;
+            padding: 30px;
+        }
+        &__data{
+            margin-bottom: 20px;   
+        }
+    }
 }
 
 

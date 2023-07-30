@@ -13,10 +13,10 @@ import VFooter from './components/VFooter.vue';
 <VHeader/>
 <main class="main">
     <FullScreen/>
-    <AboutMe/>
-    <VSlider/>
-    <Price/>
-    <Contacts/>
+    <AboutMe id="aboutme"/>
+    <VSlider id="works"/>
+    <Price id="price"/>
+    <Contacts id="contacts"/>
 </main>
 <VFooter/>
 </template>

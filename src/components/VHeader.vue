@@ -1,50 +1,66 @@
 <script setup>
 import { ref } from 'vue';
+import { RouterLink, useRouter } from 'vue-router';
+
+const router = useRouter();
 
 const burger_active = ref(false);
 
+
 const menu_list = [
     { 
-        name: "про мене"
+        name: "про мене",
+        block: "/#aboutme"
     },
     { 
-        name: "мої роботи"
+        name: "мої роботи",
+        block: "/#works"
     },
     { 
-        name: "ціни"
+        name: "ціни",
+        block: "/#price"
     },
     { 
-        name: "контакти"
+        name: "контакти",
+        block: "/#contacts"
     }
 ]
+const reception_active = ref(false);
+const reception = () => {
+    reception_active.value = !reception_active.value;
+    document.body.classList.toggle('lock');
+}
 
 const menu_burger = () =>{
     burger_active.value = !burger_active.value;
     document.body.classList.toggle('lock');
 }
 
+const push_to = (link) => {
+    router.push(`${link}`);
+}
+
 </script>
 <template>
 <header class="header">
     <div class="header__row">
-        <div class="header__logo"><a href="#">Dasha</a></div>
-
+        <div class="header__logo"><RouterLink to="/">Dasha</RouterLink></div>
         <nav class="header__nav">
             <ul class="nav__list">
-                <li v-for="item in menu_list">{{ item.name }}</li>
+                <li v-for="item in menu_list"><RouterLink :to=(item.block) >{{ item.name }}</RouterLink></li>
             </ul>
         </nav>
-        <div class="header__btn">
+        <div class="header__btn" @click="push_to('/#contacts')">
             <button>Записатись</button>
         </div>
         <div class="burger__btn" :class="{burger__btn_active: burger_active}" @click="menu_burger()"><span></span></div>
         <div class="burger__menu" :class="{burger__menu_active: burger_active}">
             <nav class="burger__nav">
                 <ul class="burger__list">
-                    <li v-for="item in menu_list">{{ item.name }}</li>
-                    <div class="header__btn">
+                    <li v-for="item in menu_list"><RouterLink :to=(item.block) >{{ item.name }}</RouterLink></li>
+                    <li class="header__btn">
                         <button>Записатись</button>
-                    </div>
+                    </li>
                 </ul>
             </nav>
         </div>
@@ -58,7 +74,7 @@ const menu_burger = () =>{
     position: fixed;
     left: 0;
     top: 0;
-    z-index: 999;
+    z-index: 98;
     height: 70px;
     &__row{
         @extend %limiter;
@@ -74,6 +90,8 @@ const menu_burger = () =>{
         font-size: 40px;
     }
     &__btn {
+        position: relative;
+        z-index: 99;
         button{
             color: #fff;
             font-size: 19px;
@@ -128,7 +146,7 @@ const menu_burger = () =>{
 //     }
 // }
 
-@media (max-width: 801px) {
+@media (max-width: 816px) {
     .header{
         &__nav{
             display: none;
