@@ -1,20 +1,20 @@
 [
     {
-        "img": "./Dasha/../../public/img/slider/1.jpg"
+        "img": "./Dasha/../../assets/img/slider/1.jpg"
     },
     {
-        "img": "./Dasha/../../public/img/slider/2.jpg"
+        "img": "./Dasha/../../assets/img/slider/2.jpg"
     },
     {
-        "img": "./Dasha/../../public/img/slider/3.jpg"
+        "img": "./Dasha/../../assets/img/slider/3.jpg"
     },
     {
-        "img": "./Dasha/../../public/img/slider/4.jpg"
+        "img": "./Dasha/../../assets/img/slider/4.jpg"
     },
     {
-        "img": "./Dasha/../../public/img/slider/5.jpg"
+        "img": "./Dasha/../../assets/img/slider/5.jpg"
     },
     {
-        "img": "./Dasha/../../public/img/slider/6.jpg"
+        "img": "./Dasha/../../assets/img/slider/6.jpg"
     }
 ]
